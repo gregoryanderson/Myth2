@@ -4,13 +4,15 @@ class Dragon {
     this.rider = rider;
     this.color = color;
     this.hungry = true;
-    this.hasEaten = 0;
-  } eat (){
-    this.hasEaten = this.hasEaten +1;
-    if (this.hasEaten >= 3){
+    this.counter = 0;
+  }
+
+  eat() {
+    this.counter++;
+    if (this.counter >= 3){
       this.hungry = false;
     }
   }
 }
 
-module.exports = Dragon
+module.exports = Dragon 
